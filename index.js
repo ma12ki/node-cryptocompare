@@ -20,7 +20,7 @@ const dateDisplayFormat = "YYYY-MM-DD HH:mm:ss";
 const maxUnitsInBatch = 2000;
 
 const ccApi = axios.create({
-  baseURL: process.env.API_URL,
+  baseURL: process.env.API_URL || "https://min-api.cryptocompare.com",
   headers: {
     authorization: `Apikey ${process.env.API_KEY}`
   }
